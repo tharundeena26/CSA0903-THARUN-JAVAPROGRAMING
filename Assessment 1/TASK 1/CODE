@@ -1,1 +1,120 @@
+/*
+ * TASK 1 - Understand the Problem and Identify the Objects
+ *
+ * Candidate classes (nouns) and their responsibilities (verbs -> methods):
+ *   Vehicle        - knows its registration number and type            (isParkable, rate)
+ *   ParkingSlot    - knows its floor/number and which vehicle holds it (occupy, free)
+ *   ParkingTicket  - unique ticket no., vehicle, slot, entry time      (close)
+ *   ParkingFacility- owns floors/slots, allocates and releases slots   (allocate, release)
+ *   FeeCalculator  - turns (vehicle type, minutes, pass) into a fee    (compute)
+ *
+ * Business rules enforced below:
+ *   R1. A slot cannot hold two vehicles.
+ *   R2. A ticket number is never reused.
+ *   R3. A vehicle (reg no) cannot be parked twice at the same time.
+ *   R4. Releasing a free / invalid slot is rejected.
+ *
+ * Part B (alternative concept): parallel String arrays vs Vehicle objects.
+ */
+import java.util.*;
 
+class Vehicle {
+    final String regNo; final String type; final int entryMinute;
+    Vehicle(String regNo, String type, int entryMinute) {
+        this.regNo = regNo; this.type = type; this.entryMinute = entryMinute;
+    }
+}
+
+class ParkingSlot {
+    final int floor, number;
+    private Vehicle occupant;                     // null => free
+    ParkingSlot(int floor, int number) { this.floor = floor; this.number = number; }
+    boolean isFree() { return occupant == null; }
+    boolean occupy(Vehicle v) { if (!isFree()) return false; occupant = v; return true; }   // R1
+    Vehicle free() { Vehicle v = occupant; occupant = null; return v; }
+    Vehicle getOccupant() { return occupant; }
+}
+
+class ParkingTicket {
+    private static int counter = 1000;            // R2: only ever increases
+    final int ticketNo; final Vehicle vehicle; final ParkingSlot slot;
+    ParkingTicket(Vehicle v, ParkingSlot s) { ticketNo = ++counter; vehicle = v; slot = s; }
+}
+
+class Facility {
+    private final ParkingSlot[][] slots;
+    private final Map<String, ParkingTicket> active = new HashMap<>();
+    Facility(int[] perFloor) {
+        slots = new ParkingSlot[perFloor.length][];
+        for (int f = 0; f < perFloor.length; f++) {
+            slots[f] = new ParkingSlot[perFloor[f]];
+            for (int s = 0; s < perFloor[f]; s++) slots[f][s] = new ParkingSlot(f, s);
+        }
+    }
+    ParkingTicket enter(Vehicle v) {
+        if (active.containsKey(v.regNo)) { System.out.println("  REJECT " + v.regNo + " (R3: already parked)"); return null; }
+        for (ParkingSlot[] floor : slots)
+            for (ParkingSlot s : floor)
+                if (s.isFree()) {
+                    s.occupy(v);
+                    ParkingTicket t = new ParkingTicket(v, s);
+                    active.put(v.regNo, t);
+                    return t;
+                }
+        System.out.println("  REJECT " + v.regNo + " (facility full)");
+        return null;
+    }
+    boolean exit(int floor, int slot) {
+        if (floor < 0 || floor >= slots.length || slot < 0 || slot >= slots[floor].length) return false;   // R4
+        Vehicle v = slots[floor][slot].free();
+        if (v == null) return false;                                                                      // R4
+        active.remove(v.regNo);
+        return true;
+    }
+}
+
+public class Task01 {
+    public static void main(String[] args) {
+        System.out.println("=== TASK 1: Objects and business rules ===");
+        Facility f = new Facility(new int[]{2, 1});
+        ParkingTicket t1 = f.enter(new Vehicle("TN01AB1111", "CAR", 600));
+        ParkingTicket t2 = f.enter(new Vehicle("TN02CD2222", "BIKE", 605));
+        System.out.println("Ticket " + t1.ticketNo + " -> floor " + t1.slot.floor + " slot " + t1.slot.number);
+        System.out.println("Ticket " + t2.ticketNo + " -> floor " + t2.slot.floor + " slot " + t2.slot.number);
+        System.out.println("R3 duplicate entry:");
+        f.enter(new Vehicle("TN01AB1111", "CAR", 610));
+        ParkingTicket t3 = f.enter(new Vehicle("TN03EF3333", "EV", 615));
+        System.out.println("Ticket " + t3.ticketNo + " -> floor " + t3.slot.floor + " slot " + t3.slot.number);
+        System.out.println("Full facility:");
+        f.enter(new Vehicle("TN04GH4444", "CAR", 620));
+        System.out.println("R4 release invalid slot (5,0): " + f.exit(5, 0));
+        System.out.println("Release (0,1): " + f.exit(0, 1));
+        System.out.println("Release (0,1) again: " + f.exit(0, 1));
+        ParkingTicket t4 = f.enter(new Vehicle("TN04GH4444", "CAR", 625));
+        System.out.println("R2 ticket numbers keep increasing: " + t1.ticketNo + "," + t2.ticketNo + "," + t3.ticketNo + "," + t4.ticketNo);
+
+        // ---------- Part B: alternative - parallel arrays ----------
+        System.out.println("\n=== Alternative: parallel arrays vs objects (search by regNo) ===");
+        int n = 200_000;
+        String[] regNo = new String[n]; String[] type = new String[n]; String[] entry = new String[n];
+        Vehicle[] objs = new Vehicle[n];
+        for (int i = 0; i < n; i++) {
+            regNo[i] = "TN" + i; type[i] = "CAR"; entry[i] = "600";
+            objs[i] = new Vehicle(regNo[i], "CAR", 600);
+        }
+        String key = "TN" + (n - 1);                      // worst case: last element
+        long a = System.nanoTime();
+        int idx = -1;
+        for (int rep = 0; rep < 50; rep++) for (int i = 0; i < n; i++) if (regNo[i].equals(key)) { idx = i; break; }
+        long arrTime = (System.nanoTime() - a) / 50;
+        long b = System.nanoTime();
+        Vehicle found = null;
+        for (int rep = 0; rep < 50; rep++) for (Vehicle v : objs) if (v.regNo.equals(key)) { found = v; break; }
+        long objTime = (System.nanoTime() - b) / 50;
+        System.out.println("Parallel arrays found index " + idx + " in " + arrTime / 1000 + " us (O(n))");
+        System.out.println("Object array   found " + found.regNo + " in " + objTime / 1000 + " us (O(n))");
+        System.out.println("Both searches are O(n). Adding a new attribute: arrays need a NEW parallel array and every");
+        System.out.println("insert/remove must update all arrays; objects need only one new field in Vehicle.");
+        System.out.println("Space per vehicle: arrays = 3 refs (+ the Strings) ; object = 1 ref + header + 3 fields (both O(1)).");
+    }
+}
