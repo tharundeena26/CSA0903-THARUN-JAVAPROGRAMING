@@ -1,0 +1,8 @@
+Q7 - Diagnose and validate a StringBuilder redesign
+Workload: 500 tickets x 80 fields
+Original repeated + average ns: 16049397
+Redesigned StringBuilder average ns: 1029939
+Checksum: 4286800
+Objective: reduce repeated temporary String creation and character copying.
+Complexity: repeated concatenation can copy O(n^2) characters; StringBuilder is O(n) amortized.
+Measurements vary by JVM and hardware; repeat runs before drawing conclusions.
