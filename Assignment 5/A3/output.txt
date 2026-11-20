@@ -1,0 +1,6 @@
+A3 – Generic DAO Pattern
+Dao<T,K>: insert / findById / findAll / update / delete
+StudentDao implements Dao<Student, String>
+Student.regNo -> student.reg_no (PRIMARY KEY)
+
+Illustrative evidence preview only. Actual measurements/database results depend on local execution; replace with real screenshots and measured output before submission.
