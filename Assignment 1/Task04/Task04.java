@@ -1,13 +1,54 @@
 /*
- * TASK 4 – CLASSES, OBJECTS AND CONSTRUCTORS
+ * TASK 4 - CLASSES, OBJECTS AND CONSTRUCTORS
  *
- * Step 1: Ticket stores an ID, registration number and parking duration.
- * Step 2: The no-argument constructor chains to the main constructor using
- *         this(...), supplying default values.
- * Step 3: The two-argument constructor also chains to the main constructor.
- * Step 4: The main constructor validates all values before assigning fields.
- * Step 5: The copy constructor accepts an existing Ticket and copies its
- *         data by calling another constructor.
- * Step 6: main() creates an original ticket and a copy, then prints both.
+ * Step 1: Ticket stores an ID, registration and parking duration.
+ * Step 2: Constructors demonstrate overloading and constructor chaining.
+ * Step 3: The copy constructor creates a copy of an existing ticket.
  */
-public class Task04{static class Ticket{final long id;final String reg;final int minutes;Ticket(){this(1,"UNKNOWN",0);}Ticket(long i,String r){this(i,r,0);}Ticket(long i,String r,int m){if(i<1||r==null||r.isBlank()||m<0)throw new IllegalArgumentException();id=i;reg=r;minutes=m;}Ticket(Ticket t){this(t.id,t.reg,t.minutes);}public String toString(){return id+" "+reg+" "+minutes+" min";}}public static void main(String[]x){Ticket a=new Ticket(101,"TN01AB1111",90);System.out.println("Original: "+a);System.out.println("Copy: "+new Ticket(a));}}
+public class Task04 {
+
+    static class Ticket {
+        final long id;
+        final String registration;
+        final int minutes;
+
+        Ticket() {
+            this(1, "UNKNOWN", 0);
+        }
+
+        Ticket(long id, String registration) {
+            this(id, registration, 0);
+        }
+
+        Ticket(long id, String registration, int minutes) {
+
+            if (id < 1 || registration == null
+                    || registration.isBlank() || minutes < 0) {
+                throw new IllegalArgumentException();
+            }
+
+            this.id = id;
+            this.registration = registration;
+            this.minutes = minutes;
+        }
+
+        Ticket(Ticket ticket) {
+            this(ticket.id, ticket.registration, ticket.minutes);
+        }
+
+        public String toString() {
+            return id + " " + registration + " " + minutes + " min";
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Ticket original =
+                new Ticket(101, "TN01AB1111", 90);
+
+        Ticket copy = new Ticket(original);
+
+        System.out.println("Original: " + original);
+        System.out.println("Copy: " + copy);
+    }
+}
