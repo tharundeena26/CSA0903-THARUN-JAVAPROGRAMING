@@ -1,14 +1,52 @@
 /*
- * TASK 1 – PROBLEM ANALYSIS AND OBJECTS
+ * TASK 1 - PROBLEM ANALYSIS AND OBJECTS
  *
- * Step 1: Define a Vehicle class so a vehicle's registration and type
- *         are stored together in one object.
- * Step 2: Define a Slot class to represent one parking space.
- * Step 3: In park(), check whether the slot is already occupied.
- * Step 4: If it is free, store the Vehicle object and return true.
- *         Otherwise return false without replacing the first vehicle.
- * Step 5: release() clears the occupant reference and makes the slot free.
- * Step 6: main() tests successful parking, rejection of a second vehicle,
- *         and release of the slot.
+ * Step 1: Vehicle stores the registration number and vehicle type.
+ * Step 2: Slot represents one parking space.
+ * Step 3: park() checks whether the slot is already occupied.
+ * Step 4: If free, the vehicle is stored and true is returned.
+ * Step 5: release() clears the slot.
  */
-public class Task01 { static class Vehicle{String reg,type;Vehicle(String r,String t){reg=r;type=t;}} static class Slot{Vehicle occupant;boolean park(Vehicle v){if(occupant!=null)return false;occupant=v;return true;}void release(){occupant=null;}} public static void main(String[]x){Slot s=new Slot();System.out.println("First vehicle: "+s.park(new Vehicle("TN01AB1111","Car")));System.out.println("Second vehicle: "+s.park(new Vehicle("TN02CD2222","Bike")));s.release();System.out.println("Slot free: "+(s.occupant==null));}}
+public class Task01 {
+
+    static class Vehicle {
+        String registration;
+        String type;
+
+        Vehicle(String registration, String type) {
+            this.registration = registration;
+            this.type = type;
+        }
+    }
+
+    static class Slot {
+        Vehicle occupant;
+
+        boolean park(Vehicle vehicle) {
+            if (occupant != null) {
+                return false;
+            }
+
+            occupant = vehicle;
+            return true;
+        }
+
+        void release() {
+            occupant = null;
+        }
+    }
+
+    public static void main(String[] args) {
+        Slot slot = new Slot();
+
+        System.out.println("First vehicle: "
+                + slot.park(new Vehicle("TN01AB1111", "Car")));
+
+        System.out.println("Second vehicle: "
+                + slot.park(new Vehicle("TN02CD2222", "Bike")));
+
+        slot.release();
+
+        System.out.println("Slot free: " + (slot.occupant == null));
+    }
+}
