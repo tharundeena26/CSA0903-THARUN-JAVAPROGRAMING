@@ -1,1 +1,7 @@
-Generated in this session from verified execution.
+Q7 - Concurrent fault-tolerant result processor
+Files submitted: 10000 (100 missing and 100 corrupt)
+Pool 1 -> success=9800, failed=200, score total=489961, elapsed=357 ms
+Pool 2 -> success=9800, failed=200, score total=489961, elapsed=80 ms
+Pool 4 -> success=9800, failed=200, score total=489961, elapsed=71 ms
+Pool 8 -> success=9800, failed=200, score total=489961, elapsed=71 ms
+Expected per run: 9800 successful, 200 failed
