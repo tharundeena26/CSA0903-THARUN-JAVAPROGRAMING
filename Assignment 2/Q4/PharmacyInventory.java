@@ -3,10 +3,10 @@ import java.util.*;
 public class PharmacyInventory {
     private static volatile int checksum;
 
-    private static <M extends Map<String, Integer>> long lookupTime(M map, int lookups) {
+    private static <M extends Map<String, Integer>> long lookupTime(M map, String[] keys) {
         long start = System.nanoTime();
-        for (int i = 0; i < lookups; i++) {
-            checksum += map.get(String.format("MED%06d", i % map.size()));
+        for (String key : keys) {
+            checksum += map.get(key);
         }
         return System.nanoTime() - start;
     }
@@ -34,10 +34,13 @@ public class PharmacyInventory {
         }
 
         System.out.println("\nMedicine count: " + n);
-        int lookups = 100000;
-        System.out.println("HashMap lookup ns: " + lookupTime(hash, lookups));
-        System.out.println("TreeMap lookup ns: " + lookupTime(tree, lookups));
-        System.out.println("LinkedHashMap lookup ns: " + lookupTime(linked, lookups));
+        String[] lookupKeys = new String[100000];
+        for (int i = 0; i < lookupKeys.length; i++) {
+            lookupKeys[i] = String.format("MED%06d", i % n);
+        }
+        System.out.println("HashMap lookup ns: " + lookupTime(hash, lookupKeys));
+        System.out.println("TreeMap lookup ns: " + lookupTime(tree, lookupKeys));
+        System.out.println("LinkedHashMap lookup ns: " + lookupTime(linked, lookupKeys));
         System.out.println("HashMap report iteration ns: " + reportTime(hash));
         System.out.println("TreeMap code-order report ns: " + reportTime(tree));
         System.out.println("LinkedHashMap insertion-order report ns: " + reportTime(linked));
