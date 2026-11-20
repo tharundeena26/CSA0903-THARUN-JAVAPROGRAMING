@@ -1,0 +1,3 @@
+Q6 - Hospital emergency triage
+Meena(S1) Kumar(S1) Lata(S2) Sanjay(S2) Ravi(S3) John(S3) Priya(S4) Asha(S5)
+Lower severity number is treated first; arrival counter preserves FIFO ties.
