@@ -1,0 +1,9 @@
+Outpatient Appointment Desk
+Patient ID: [P1001]
+Department: [Cardiology v]
+Doctor: [Dr. Arun v]
+Time slot: [10:00 v]
+[ Book appointment ]
+Status: Department selection refreshes doctor list
+
+Evidence note: this file is a test/expected-behaviour guide. Run the Swing program on a desktop and capture your actual screen for final submission.
