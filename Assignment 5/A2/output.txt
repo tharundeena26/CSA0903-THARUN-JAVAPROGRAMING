@@ -1,0 +1,7 @@
+A2 – Buffered I/O Design
+50 MiB file: 52,428,800 bytes
+Single-byte read loop: about 52.4 million read() calls
+64 KiB buffer: about 800 bulk reads
+Time O(file size), extra memory O(buffer size)
+
+Illustrative evidence preview only. Actual measurements/database results depend on local execution; replace with real screenshots and measured output before submission.
