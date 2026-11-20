@@ -1,0 +1,5 @@
+Q3 - hashCode and equals contract
+Broken class set size (may show duplicate): 3
+Corrected unique students: 2
+Students: [192311001 Arun, 192311002 Divya]
+Use immutable fields in equals/hashCode while an object is stored in a hash set.
