@@ -1,15 +1,111 @@
 /*
- * TASK 8 – RUNTIME POLYMORPHISM AND INTERFACES
+ * TASK 8 - RUNTIME POLYMORPHISM AND INTERFACES
  *
- * Step 1: Chargeable defines the chargingFee() contract.
- * Step 2: Abstract Vehicle stores a registration number and defines the
- *         common calculateFee() method.
- * Step 3: TwoWheeler and Car override ratePerHour() with different rates.
+ * Step 1: Chargeable defines the charging fee method.
+ * Step 2: Vehicle stores common registration information.
+ * Step 3: TwoWheeler and Car provide different hourly rates.
  * Step 4: ElectricCar extends Car and implements Chargeable.
- * Step 5: Put different concrete vehicles into one Vehicle array.
- * Step 6: Loop through the array and call calculateFee() on each reference.
- *         Runtime polymorphism selects the correct ratePerHour() method.
- * Step 7: Use instanceof to apply the additional charging fee only to EVs.
- * Step 8: Compare two vehicles using their registration numbers.
+ * Step 5: Store different vehicle objects in one Vehicle array.
+ * Step 6: Call calculateFee() and allow runtime polymorphism to work.
  */
-interface Chargeable{double chargingFee(int kWh);}abstract class Vehicle{private final String regNo;protected Vehicle(String r){regNo=r;}public String getRegNo(){return regNo;}protected abstract double ratePerHour();public double calculateFee(int m){if(m<0)throw new IllegalArgumentException("negative duration");return ((m+59)/60)*ratePerHour();}public boolean equals(Object o){return o instanceof Vehicle&&regNo.equals(((Vehicle)o).regNo);}public int hashCode(){return regNo.hashCode();}}class TwoWheeler extends Vehicle{TwoWheeler(String r){super(r);}protected double ratePerHour(){return 10;}}class Car extends Vehicle{Car(String r){super(r);}protected double ratePerHour(){return 30;}}class ElectricCar extends Car implements Chargeable{ElectricCar(String r){super(r);}public double chargingFee(int k){return 12.0*k;}}public class FeeDemo{public static void main(String[]x){Vehicle[]a={new TwoWheeler("TN01A1"),new Car("TN02B2"),new ElectricCar("TN03C3")};for(Vehicle v:a){double f=v.calculateFee(130);if(v instanceof Chargeable c)f+=c.chargingFee(10);System.out.println(v.getClass().getSimpleName()+" "+v.getRegNo()+" -> Rs "+f);}System.out.println(new Car("TN02B2").equals(new ElectricCar("TN02B2")));}}
+interface Chargeable {
+    double chargingFee(int units);
+}
+
+abstract class Vehicle {
+
+    private final String registration;
+
+    protected Vehicle(String registration) {
+        this.registration = registration;
+    }
+
+    public String getRegistration() {
+        return registration;
+    }
+
+    protected abstract double ratePerHour();
+
+    public double calculateFee(int minutes) {
+
+        if (minutes < 0) {
+            throw new IllegalArgumentException("Negative duration");
+        }
+
+        return ((minutes + 59) / 60) * ratePerHour();
+    }
+
+    public boolean equals(Object object) {
+        return object instanceof Vehicle
+                && registration.equals(
+                        ((Vehicle) object).registration);
+    }
+
+    public int hashCode() {
+        return registration.hashCode();
+    }
+}
+
+class TwoWheeler extends Vehicle {
+
+    TwoWheeler(String registration) {
+        super(registration);
+    }
+
+    protected double ratePerHour() {
+        return 10;
+    }
+}
+
+class Car extends Vehicle {
+
+    Car(String registration) {
+        super(registration);
+    }
+
+    protected double ratePerHour() {
+        return 30;
+    }
+}
+
+class ElectricCar extends Car implements Chargeable {
+
+    ElectricCar(String registration) {
+        super(registration);
+    }
+
+    public double chargingFee(int units) {
+        return 12.0 * units;
+    }
+}
+
+public class FeeDemo {
+
+    public static void main(String[] args) {
+
+        Vehicle[] vehicles = {
+            new TwoWheeler("TN01A1"),
+            new Car("TN02B2"),
+            new ElectricCar("TN03C3")
+        };
+
+        for (Vehicle vehicle : vehicles) {
+
+            double fee = vehicle.calculateFee(130);
+
+            if (vehicle instanceof Chargeable) {
+                Chargeable chargeable = (Chargeable) vehicle;
+                fee += chargeable.chargingFee(10);
+            }
+
+            System.out.println(
+                    vehicle.getClass().getSimpleName()
+                    + " " + vehicle.getRegistration()
+                    + " -> Rs " + fee);
+        }
+
+        System.out.println(
+                new Car("TN02B2").equals(
+                        new ElectricCar("TN02B2")));
+    }
+}
