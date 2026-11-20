@@ -1,0 +1,42 @@
+Q2 - Playlist collection experiment
+
+Playlist size: 1000
+ArrayList add end ns: 407416
+LinkedList add end ns: 477849
+ArrayList insert front ns: 553831
+LinkedList insert front ns: 681000
+ArrayList insert middle ns: 354642
+LinkedList insert middle ns: 1344562
+ArrayList indexed access ns: 248132
+LinkedList indexed access ns: 1305346
+ArrayList iteration ns: 303624
+LinkedList iteration ns: 441223
+ArrayDeque addLast/removeFirst ns: 463209
+
+Playlist size: 5000
+ArrayList add end ns: 711589
+LinkedList add end ns: 1403786
+ArrayList insert front ns: 1779216
+LinkedList insert front ns: 1828149
+ArrayList insert middle ns: 1986293
+LinkedList insert middle ns: 19557630
+ArrayList indexed access ns: 459696
+LinkedList indexed access ns: 25286865
+ArrayList iteration ns: 396163
+LinkedList iteration ns: 551186
+ArrayDeque addLast/removeFirst ns: 1688983
+
+Playlist size: 10000
+ArrayList add end ns: 2034312
+LinkedList add end ns: 2446374
+ArrayList insert front ns: 3211984
+LinkedList insert front ns: 2407334
+ArrayList insert middle ns: 2636646
+LinkedList insert middle ns: 51889138
+ArrayList indexed access ns: 961352
+LinkedList indexed access ns: 50255313
+ArrayList iteration ns: 653307
+LinkedList iteration ns: 867001
+ArrayDeque addLast/removeFirst ns: 3027693
+Checksum: 251968000
+ArrayList suits append, indexed access and iteration; use ArrayDeque for a two-ended queue.
