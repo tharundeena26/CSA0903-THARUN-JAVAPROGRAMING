@@ -1,0 +1,6 @@
+A4 – Serialization Design
+Persist domain state: Hostel -> Rooms -> Residents
+transient: password and live JDBC Connection
+Explicit serialVersionUID supports compatible class evolution
+
+Illustrative evidence preview only. Actual measurements/database results depend on local execution; replace with real screenshots and measured output before submission.
