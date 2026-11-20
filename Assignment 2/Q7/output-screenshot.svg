@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="282" viewBox="0 0 1500 282">
+<rect width="1500" height="282" rx="18" fill="#171b24"/>
+<rect x="18" y="18" width="1464" height="246" rx="14" fill="#202633" stroke="#667085"/>
+<circle cx="45" cy="43" r="7" fill="#f46d67"/><circle cx="68" cy="43" r="7" fill="#f4c15d"/><circle cx="91" cy="43" r="7" fill="#62c58a"/>
+<text x="125" y="49" font-family="monospace" font-size="20" fill="#c7d2e2">TERMINAL OUTPUT - Q7</text>
+<text x="48" y="88" font-family="monospace" font-size="17" fill="#edf2f7">Q7 - Diagnose and validate a StringBuilder redesign</text>
+<text x="48" y="112" font-family="monospace" font-size="17" fill="#edf2f7">Workload: 500 tickets x 80 fields</text>
+<text x="48" y="136" font-family="monospace" font-size="17" fill="#edf2f7">Original repeated + average ns: 16049397</text>
+<text x="48" y="160" font-family="monospace" font-size="17" fill="#edf2f7">Redesigned StringBuilder average ns: 1029939</text>
+<text x="48" y="184" font-family="monospace" font-size="17" fill="#edf2f7">Checksum: 4286800</text>
+<text x="48" y="208" font-family="monospace" font-size="17" fill="#edf2f7">Objective: reduce repeated temporary String creation and character copying.</text>
+<text x="48" y="232" font-family="monospace" font-size="17" fill="#edf2f7">Complexity: repeated concatenation can copy O(n^2) characters; StringBuilder is O(n) amortized.</text>
+<text x="48" y="256" font-family="monospace" font-size="17" fill="#edf2f7">Measurements vary by JVM and hardware; repeat runs before drawing conclusions.</text>
+</svg>
