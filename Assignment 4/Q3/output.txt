@@ -1,0 +1,9 @@
+Campus Library Search
+Search: [Java Programming          ] [All v] [Search]
+Results area expands when the window is resized
+- Java Programming - Data Structures
+- Java Programming - Database Systems
+[Prev] [Next] [Reserve]
+Status: 3 sample results
+
+Evidence note: this file is a test/expected-behaviour guide. Run the Swing program on a desktop and capture your actual screen for final submission.
