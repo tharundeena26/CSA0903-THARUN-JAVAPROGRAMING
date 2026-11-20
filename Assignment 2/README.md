@@ -6,7 +6,7 @@
 **Source assignment:** ASSIGNMENT2 javi.pdf (Q1-Q7)
 
 ## Folder structure
-Each question has its own folder (Q1 through Q7). Every folder contains readable line-by-line Java source code, output.txt, and output-screenshot.png.
+Each question has its own folder (Q1 through Q7). Every folder contains readable line-by-line Java source code, output.txt, and output-screenshot.svg (a vector terminal screenshot).
 
 ## Compile and run
 Run these commands from the relevant question folder:
@@ -25,7 +25,7 @@ Run these commands from the relevant question folder:
 1. Q1 compares String concatenation, StringBuilder and StringBuffer for short, large and custom ticket workloads.
 2. Q2 compares ArrayList, LinkedList and ArrayDeque operations at three playlist sizes.
 3. Q3 demonstrates the hashCode/equals contract and the corrected Student class.
-4. Q4 compares HashMap, TreeMap and LinkedHashMap for pharmacy inventory lookup and reporting.
+4. Q4 compares HashMap, TreeMap and LinkedHashMap for pharmacy inventory lookup and reporting. Lookup keys are prepared before timing so key formatting is excluded from the map lookup measurement.
 5. Q5 implements a generic Leaderboard using a Comparator chain: points descending, goal difference descending, then team name ascending.
 6. Q6 implements emergency triage with PriorityQueue, ordering by severity and then arrival sequence.
 7. Q7 diagnoses repeated String concatenation and validates a StringBuilder redesign using the same workload.
