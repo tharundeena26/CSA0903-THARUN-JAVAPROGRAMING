@@ -26,7 +26,13 @@ public class NamedInnerConverter extends JFrame {
         ConvertHandler handler = new ConvertHandler();
         convert.addActionListener(handler);
         amount.addActionListener(handler);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent event) {
+                dispose();
+            }
+        });
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         pack();
     }
 
