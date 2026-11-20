@@ -6,7 +6,7 @@
 
 ## How to use this repository
 
-Each task folder contains the Java source code and its sample output capture. The Java files now include numbered, step-by-step comments explaining what the program does and why each important statement is used.
+Each task folder contains its Java source code and sample output capture. All 12 Java source files have been reformatted into normal, readable, line-by-line Java code. The earlier compressed one-line source formatting has been replaced. Step-by-step comments explain the main logic.
 
 ### Compile and run
 
