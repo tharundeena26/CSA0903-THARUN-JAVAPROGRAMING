@@ -1,0 +1,6 @@
+A1 – Bus Pass File Format
+Text record: passId|regNo|name|route|stop|validUntil|amount|checksum
+Binary record: UTF fields + int route + epoch day + double amount
+Find by ID: O(n) scan; fixed-record indexed seek: O(1)
+
+Illustrative evidence preview only. Actual measurements/database results depend on local execution; replace with real screenshots and measured output before submission.
