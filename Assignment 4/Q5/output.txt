@@ -1,0 +1,8 @@
+Currency Converter
+INR amount: [1000]
+Convert to: [USD v]
+[ Convert ]
+Result: 12.00 USD
+Press Enter in amount field to convert; invalid input shows a dialog
+
+Evidence note: this file is a test/expected-behaviour guide. Run the Swing program on a desktop and capture your actual screen for final submission.
