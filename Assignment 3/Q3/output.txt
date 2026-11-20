@@ -1,1 +1,6 @@
-Generated in this session from verified execution.
+Manual version: missing-store.txt -> stores/missing-store.txt
+Manual report rows: 3
+Manual open readers after processing: 0
+Try-with-resources: missing-store.txt -> stores/missing-store.txt
+Try-with-resources report rows: 3
+Reports contain the same valid rows: true
