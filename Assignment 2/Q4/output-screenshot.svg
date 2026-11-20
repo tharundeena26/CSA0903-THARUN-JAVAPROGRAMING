@@ -1,39 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="882" viewBox="0 0 1500 882">
-<rect width="1500" height="882" rx="18" fill="#171b24"/>
-<rect x="18" y="18" width="1464" height="846" rx="14" fill="#202633" stroke="#667085"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+<rect width="1500" height="900" rx="18" fill="#171b24"/>
+<rect x="18" y="18" width="1464" height="864" rx="14" fill="#202633" stroke="#667085"/>
 <circle cx="45" cy="43" r="7" fill="#f46d67"/><circle cx="68" cy="43" r="7" fill="#f4c15d"/><circle cx="91" cy="43" r="7" fill="#62c58a"/>
 <text x="125" y="49" font-family="monospace" font-size="20" fill="#c7d2e2">TERMINAL OUTPUT - Q4</text>
 <text x="48" y="88" font-family="monospace" font-size="17" fill="#edf2f7">Q4 - Pharmacy inventory map comparison</text>
-<text x="48" y="112" font-family="monospace" font-size="17" fill="#edf2f7"> </text>
-<text x="48" y="136" font-family="monospace" font-size="17" fill="#edf2f7">Medicine count: 1000</text>
-<text x="48" y="160" font-family="monospace" font-size="17" fill="#edf2f7">HashMap lookup ns: 368776316</text>
-<text x="48" y="184" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap lookup ns: 177531117</text>
-<text x="48" y="208" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap lookup ns: 84515768</text>
-<text x="48" y="232" font-family="monospace" font-size="17" fill="#edf2f7">HashMap report iteration ns: 851437</text>
-<text x="48" y="256" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap code-order report ns: 576501</text>
-<text x="48" y="280" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap insertion-order report ns: 503652</text>
-<text x="48" y="304" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap first key: MED000000</text>
-<text x="48" y="328" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap first key: MED000999</text>
-<text x="48" y="352" font-family="monospace" font-size="17" fill="#edf2f7"> </text>
-<text x="48" y="376" font-family="monospace" font-size="17" fill="#edf2f7">Medicine count: 5000</text>
-<text x="48" y="400" font-family="monospace" font-size="17" fill="#edf2f7">HashMap lookup ns: 47648293</text>
-<text x="48" y="424" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap lookup ns: 63385607</text>
-<text x="48" y="448" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap lookup ns: 75818172</text>
-<text x="48" y="472" font-family="monospace" font-size="17" fill="#edf2f7">HashMap report iteration ns: 607903</text>
-<text x="48" y="496" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap code-order report ns: 611613</text>
-<text x="48" y="520" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap insertion-order report ns: 582183</text>
-<text x="48" y="544" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap first key: MED000000</text>
-<text x="48" y="568" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap first key: MED004999</text>
-<text x="48" y="592" font-family="monospace" font-size="17" fill="#edf2f7"> </text>
-<text x="48" y="616" font-family="monospace" font-size="17" fill="#edf2f7">Medicine count: 10000</text>
-<text x="48" y="640" font-family="monospace" font-size="17" fill="#edf2f7">HashMap lookup ns: 44248657</text>
-<text x="48" y="664" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap lookup ns: 59505763</text>
-<text x="48" y="688" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap lookup ns: 41208652</text>
-<text x="48" y="712" font-family="monospace" font-size="17" fill="#edf2f7">HashMap report iteration ns: 1047492</text>
-<text x="48" y="736" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap code-order report ns: 859089</text>
-<text x="48" y="760" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap insertion-order report ns: 712491</text>
-<text x="48" y="784" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap first key: MED000000</text>
-<text x="48" y="808" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap first key: MED009999</text>
+<text x="48" y="112" font-family="monospace" font-size="17" fill="#edf2f7">Medicine count: 1000</text>
+<text x="48" y="136" font-family="monospace" font-size="17" fill="#edf2f7">HashMap lookup ns: 16187873</text>
+<text x="48" y="160" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap lookup ns: 24196968</text>
+<text x="48" y="184" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap lookup ns: 4596009</text>
+<text x="48" y="208" font-family="monospace" font-size="17" fill="#edf2f7">HashMap report iteration ns: 597876</text>
+<text x="48" y="232" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap code-order report ns: 422673</text>
+<text x="48" y="256" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap insertion-order report ns: 440302</text>
+<text x="48" y="280" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap first key: MED000000</text>
+<text x="48" y="304" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap first key: MED000999</text>
+<text x="48" y="352" font-family="monospace" font-size="17" fill="#edf2f7">Medicine count: 5000</text>
+<text x="48" y="376" font-family="monospace" font-size="17" fill="#edf2f7">HashMap lookup ns: 5770185</text>
+<text x="48" y="400" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap lookup ns: 16530618</text>
+<text x="48" y="424" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap lookup ns: 2316985</text>
+<text x="48" y="448" font-family="monospace" font-size="17" fill="#edf2f7">HashMap report iteration ns: 443132</text>
+<text x="48" y="472" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap code-order report ns: 647638</text>
+<text x="48" y="496" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap insertion-order report ns: 8054220</text>
+<text x="48" y="520" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap first key: MED000000</text>
+<text x="48" y="544" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap first key: MED004999</text>
+<text x="48" y="592" font-family="monospace" font-size="17" fill="#edf2f7">Medicine count: 10000</text>
+<text x="48" y="616" font-family="monospace" font-size="17" fill="#edf2f7">HashMap lookup ns: 4559863</text>
+<text x="48" y="640" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap lookup ns: 22672397</text>
+<text x="48" y="664" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap lookup ns: 2460395</text>
+<text x="48" y="688" font-family="monospace" font-size="17" fill="#edf2f7">HashMap report iteration ns: 565917</text>
+<text x="48" y="712" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap code-order report ns: 553792</text>
+<text x="48" y="736" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap insertion-order report ns: 393983</text>
+<text x="48" y="760" font-family="monospace" font-size="17" fill="#edf2f7">TreeMap first key: MED000000</text>
+<text x="48" y="784" font-family="monospace" font-size="17" fill="#edf2f7">LinkedHashMap first key: MED009999</text>
 <text x="48" y="832" font-family="monospace" font-size="17" fill="#edf2f7">Checksum: -1696961296</text>
-<text x="48" y="856" font-family="monospace" font-size="17" fill="#edf2f7">HashMap: average O(1) lookup; TreeMap: sorted keys and O(log n); LinkedHashMap: insertion order.</text>
 </svg>
