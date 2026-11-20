@@ -1,0 +1,8 @@
+A5 – Transaction and SQL Safety
+BEGIN TRANSACTION
+Debit hostel wallet: Rs. 500
+Credit canteen wallet: Rs. 500
+COMMIT only if both updates succeed; otherwise ROLLBACK
+Use PreparedStatement parameters for login values
+
+Illustrative evidence preview only. Actual measurements/database results depend on local execution; replace with real screenshots and measured output before submission.
