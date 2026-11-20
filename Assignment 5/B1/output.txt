@@ -1,0 +1,6 @@
+Expected PassStoreDemo output:
+[P1003, 192311003, Divya, 7, 3800.0]
+null
+Route 12 count: 1
+
+LineCounter prints line counts and elapsed milliseconds for unbuffered and 64 KiB buffered reads. Actual times depend on hardware, OS cache and file size; run benchmark.sh to record real results.
