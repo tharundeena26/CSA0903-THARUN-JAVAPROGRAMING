@@ -1,1 +1,2 @@
-Generated in this session from verified execution.
+Sum of tokens collected: 210 (expected 210)
+Wallet balances after ordered transfer: 800 and 700
