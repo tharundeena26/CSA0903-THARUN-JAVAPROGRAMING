@@ -1,1 +1,16 @@
-Generated in this session from verified execution.
+Q4 - Scanner station thread life cycle
+Station-1 alive after start: true
+Station-2 alive after start: true
+Station-3 alive after start: true
+Station-4 alive after start: true
+Station-1 scanned 5 scripts
+Station-2 scanned 6 scripts
+Station-3 scanned 7 scripts
+Station-4 scanned 8 scripts
+Total from Thread subclasses: 26
+Runnable-1 scanned 3 scripts (Runnable)
+Runnable-2 scanned 3 scripts (Runnable)
+Runnable-3 scanned 3 scripts (Runnable)
+Runnable-4 scanned 3 scripts (Runnable)
+Total from Runnable stations: 12
+All scanner threads finished: true
