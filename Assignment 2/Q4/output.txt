@@ -1,0 +1,33 @@
+Q4 - Pharmacy inventory map comparison
+
+Medicine count: 1000
+HashMap lookup ns: 368776316
+TreeMap lookup ns: 177531117
+LinkedHashMap lookup ns: 84515768
+HashMap report iteration ns: 851437
+TreeMap code-order report ns: 576501
+LinkedHashMap insertion-order report ns: 503652
+TreeMap first key: MED000000
+LinkedHashMap first key: MED000999
+
+Medicine count: 5000
+HashMap lookup ns: 47648293
+TreeMap lookup ns: 63385607
+LinkedHashMap lookup ns: 75818172
+HashMap report iteration ns: 607903
+TreeMap code-order report ns: 611613
+LinkedHashMap insertion-order report ns: 582183
+TreeMap first key: MED000000
+LinkedHashMap first key: MED004999
+
+Medicine count: 10000
+HashMap lookup ns: 44248657
+TreeMap lookup ns: 59505763
+LinkedHashMap lookup ns: 41208652
+HashMap report iteration ns: 1047492
+TreeMap code-order report ns: 859089
+LinkedHashMap insertion-order report ns: 712491
+TreeMap first key: MED000000
+LinkedHashMap first key: MED009999
+Checksum: -1696961296
+HashMap: average O(1) lookup; TreeMap: sorted keys and O(log n); LinkedHashMap: insertion order.
