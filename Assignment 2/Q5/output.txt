@@ -1,0 +1,3 @@
+Q5 - Team leaderboard
+[Eagles(9,6), Bisons(9,4), Panthers(9,4), Cobras(6,1)]
+Bisons is before Panthers because the final tie-break is alphabetical.
