@@ -1,0 +1,6 @@
+ATM test cases (account number ACC1001):
+1) 1500     -> valid withdrawal
+2) letters  -> NumberFormatException / non-numeric input
+3) -50      -> InvalidWithdrawalException
+4) 7000     -> InsufficientFundsException (balance is Rs.5000)
+5) Rename card-reader.txt before running -> IOException (missing card-reader file)
