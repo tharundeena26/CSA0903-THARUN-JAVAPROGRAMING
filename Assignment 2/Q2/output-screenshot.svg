@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1098" viewBox="0 0 1500 1098">
+<rect width="1500" height="1098" rx="18" fill="#171b24"/>
+<rect x="18" y="18" width="1464" height="1062" rx="14" fill="#202633" stroke="#667085"/>
+<circle cx="45" cy="43" r="7" fill="#f46d67"/><circle cx="68" cy="43" r="7" fill="#f4c15d"/><circle cx="91" cy="43" r="7" fill="#62c58a"/>
+<text x="125" y="49" font-family="monospace" font-size="20" fill="#c7d2e2">TERMINAL OUTPUT - Q2</text>
+<text x="48" y="88" font-family="monospace" font-size="17" fill="#edf2f7">Q2 - Playlist collection experiment</text>
+<text x="48" y="112" font-family="monospace" font-size="17" fill="#edf2f7"> </text>
+<text x="48" y="136" font-family="monospace" font-size="17" fill="#edf2f7">Playlist size: 1000</text>
+<text x="48" y="160" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList add end ns: 407416</text>
+<text x="48" y="184" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList add end ns: 477849</text>
+<text x="48" y="208" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList insert front ns: 553831</text>
+<text x="48" y="232" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList insert front ns: 681000</text>
+<text x="48" y="256" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList insert middle ns: 354642</text>
+<text x="48" y="280" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList insert middle ns: 1344562</text>
+<text x="48" y="304" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList indexed access ns: 248132</text>
+<text x="48" y="328" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList indexed access ns: 1305346</text>
+<text x="48" y="352" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList iteration ns: 303624</text>
+<text x="48" y="376" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList iteration ns: 441223</text>
+<text x="48" y="400" font-family="monospace" font-size="17" fill="#edf2f7">ArrayDeque addLast/removeFirst ns: 463209</text>
+<text x="48" y="424" font-family="monospace" font-size="17" fill="#edf2f7"> </text>
+<text x="48" y="448" font-family="monospace" font-size="17" fill="#edf2f7">Playlist size: 5000</text>
+<text x="48" y="472" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList add end ns: 711589</text>
+<text x="48" y="496" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList add end ns: 1403786</text>
+<text x="48" y="520" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList insert front ns: 1779216</text>
+<text x="48" y="544" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList insert front ns: 1828149</text>
+<text x="48" y="568" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList insert middle ns: 1986293</text>
+<text x="48" y="592" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList insert middle ns: 19557630</text>
+<text x="48" y="616" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList indexed access ns: 459696</text>
+<text x="48" y="640" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList indexed access ns: 25286865</text>
+<text x="48" y="664" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList iteration ns: 396163</text>
+<text x="48" y="688" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList iteration ns: 551186</text>
+<text x="48" y="712" font-family="monospace" font-size="17" fill="#edf2f7">ArrayDeque addLast/removeFirst ns: 1688983</text>
+<text x="48" y="736" font-family="monospace" font-size="17" fill="#edf2f7"> </text>
+<text x="48" y="760" font-family="monospace" font-size="17" fill="#edf2f7">Playlist size: 10000</text>
+<text x="48" y="784" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList add end ns: 2034312</text>
+<text x="48" y="808" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList add end ns: 2446374</text>
+<text x="48" y="832" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList insert front ns: 3211984</text>
+<text x="48" y="856" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList insert front ns: 2407334</text>
+<text x="48" y="880" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList insert middle ns: 2636646</text>
+<text x="48" y="904" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList insert middle ns: 51889138</text>
+<text x="48" y="928" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList indexed access ns: 961352</text>
+<text x="48" y="952" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList indexed access ns: 50255313</text>
+<text x="48" y="976" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList iteration ns: 653307</text>
+<text x="48" y="1000" font-family="monospace" font-size="17" fill="#edf2f7">LinkedList iteration ns: 867001</text>
+<text x="48" y="1024" font-family="monospace" font-size="17" fill="#edf2f7">ArrayDeque addLast/removeFirst ns: 3027693</text>
+<text x="48" y="1048" font-family="monospace" font-size="17" fill="#edf2f7">Checksum: 251968000</text>
+<text x="48" y="1072" font-family="monospace" font-size="17" fill="#edf2f7">ArrayList suits append, indexed access and iteration; use ArrayDeque for a two-ended queue.</text>
+</svg>
