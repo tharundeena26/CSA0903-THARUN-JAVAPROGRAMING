@@ -1,0 +1,9 @@
+Campus Event Registration
+Student ID: [S1001]   Name: [Student Name]
+Event: [Coding Contest v]   [Register]
+Filter event: [All events v] [Apply filter]
+Registrations table: Student ID | Name | Event | Registered At
+File menu: Refresh | Export CSV | Exit
+Database access runs in SwingWorker; duplicate student-event pair is rejected
+
+Evidence note: this file is a test/expected-behaviour guide. Run the Swing program on a desktop and capture your actual screen for final submission.
