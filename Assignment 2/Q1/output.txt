@@ -1,0 +1,18 @@
+Q1 - Railway e-ticket text generation
+
+Short ticket (tickets=1, fields=6)
+String + average ns: 22414
+StringBuilder average ns: 4121
+StringBuffer average ns: 11355
+
+Large booking batch (tickets=1000, fields=50)
+String + average ns: 9842093
+StringBuilder average ns: 1461865
+StringBuffer average ns: 704188
+
+Custom workload (tickets=100, fields=100)
+String + average ns: 11862089
+StringBuilder average ns: 1178346
+StringBuffer average ns: 1871565
+Result checksum: 12023382
+Note: timings vary by machine and JVM; run several times.
