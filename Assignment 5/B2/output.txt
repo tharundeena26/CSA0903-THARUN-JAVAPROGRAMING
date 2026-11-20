@@ -1,0 +1,2 @@
+Unsafe login demonstration: crafted test input can make a string-concatenated SQL query accept an invalid login in the isolated local test database. The PreparedStatement version treats the same input as a value and rejects it.
+Damaged CSV sample includes wrong field count, invalid route, blank line and invalid amount. PassStore skips malformed lines.
