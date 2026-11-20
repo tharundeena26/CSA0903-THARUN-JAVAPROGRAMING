@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+<rect width="1200" height="360" fill="#eef1f5"/>
+<rect x="90" y="30" width="1020" height="300" rx="12" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+<path d="M102 30 H1098 Q1110 30 1110 42 V72 H90 V42 Q90 30 102 30" fill="#26364a"/>
+<circle cx="112" cy="51" r="6" fill="#f87171"/><circle cx="132" cy="51" r="6" fill="#fbbf24"/><circle cx="152" cy="51" r="6" fill="#4ade80"/>
+<text x="180" y="57" font-family="Arial" font-size="18" fill="#ffffff">Campus Event Registration</text>
+<text x="130" y="112" font-family="Arial" font-size="19" fill="#1f2937">Student ID: [S1001]   Name: [Student Name]</text>
+<text x="130" y="143" font-family="Arial" font-size="19" fill="#1f2937">Event: [Coding Contest v]   [Register]</text>
+<text x="130" y="174" font-family="Arial" font-size="19" fill="#1f2937">Filter event: [All events v] [Apply filter]</text>
+<text x="130" y="205" font-family="Arial" font-size="19" fill="#1f2937">Registrations table: Student ID | Name | Event | Registered At</text>
+<text x="130" y="236" font-family="Arial" font-size="19" fill="#1f2937">File menu: Refresh | Export CSV | Exit</text>
+<text x="130" y="267" font-family="Arial" font-size="19" fill="#1f2937">Database access runs in SwingWorker; duplicate student-event pair is rejected</text>
+<text x="90" y="350" font-family="Arial" font-size="14" fill="#475569">Illustrative UI preview only — not a screenshot from a live desktop execution.</text>
+</svg>
