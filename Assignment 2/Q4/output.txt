@@ -1,32 +1,32 @@
 Q4 - Pharmacy inventory map comparison
 
 Medicine count: 1000
-HashMap lookup ns: 368776316
-TreeMap lookup ns: 177531117
-LinkedHashMap lookup ns: 84515768
-HashMap report iteration ns: 851437
-TreeMap code-order report ns: 576501
-LinkedHashMap insertion-order report ns: 503652
+HashMap lookup ns: 16187873
+TreeMap lookup ns: 24196968
+LinkedHashMap lookup ns: 4596009
+HashMap report iteration ns: 597876
+TreeMap code-order report ns: 422673
+LinkedHashMap insertion-order report ns: 440302
 TreeMap first key: MED000000
 LinkedHashMap first key: MED000999
 
 Medicine count: 5000
-HashMap lookup ns: 47648293
-TreeMap lookup ns: 63385607
-LinkedHashMap lookup ns: 75818172
-HashMap report iteration ns: 607903
-TreeMap code-order report ns: 611613
-LinkedHashMap insertion-order report ns: 582183
+HashMap lookup ns: 5770185
+TreeMap lookup ns: 16530618
+LinkedHashMap lookup ns: 2316985
+HashMap report iteration ns: 443132
+TreeMap code-order report ns: 647638
+LinkedHashMap insertion-order report ns: 8054220
 TreeMap first key: MED000000
 LinkedHashMap first key: MED004999
 
 Medicine count: 10000
-HashMap lookup ns: 44248657
-TreeMap lookup ns: 59505763
-LinkedHashMap lookup ns: 41208652
-HashMap report iteration ns: 1047492
-TreeMap code-order report ns: 859089
-LinkedHashMap insertion-order report ns: 712491
+HashMap lookup ns: 4559863
+TreeMap lookup ns: 22672397
+LinkedHashMap lookup ns: 2460395
+HashMap report iteration ns: 565917
+TreeMap code-order report ns: 553792
+LinkedHashMap insertion-order report ns: 393983
 TreeMap first key: MED000000
 LinkedHashMap first key: MED009999
 Checksum: -1696961296
