@@ -1,0 +1,6 @@
+Expected migration behaviour for the included sample:
+Inserted records: 4
+Rejected records: 1
+Line 4: For input string: "not-a-route" | P2004,192311104,Damaged,not-a-route,4100.00
+
+DatabaseMetaData prints the database product/version, JDBC driver/version and available tables. Exact values depend on the local MySQL server and Connector/J version.
